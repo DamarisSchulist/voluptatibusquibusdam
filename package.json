@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "name": "voluptatibusquibusdam",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepublishOnly": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "module": "dist/rsuv-lib.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/rsuv-lib.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/rsuv-lib.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "author": "JaydeJakubowski",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DamarisSchulist/voluptatibusquibusdam.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "qui",
+    "ad"
+  ],
+  "description": "universal components, standard library, TS, JS",
+  "peerDependencies": {},
+  "dependencies": {
+    "@types/lodash": "^4.14.170",
+    "@types/validator": "^13.6.2",
+    "dayjs": "^1.10.7",
+    "email-validator": "^2.0.4",
+    "hogg-lib": "^1.1.0",
+    "isomorphic-fetch": "^3.0.0",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.10.2",
+    "@types/isomorphic-fetch": "^0.0.35",
+    "@types/jest": "^26.0.22",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "size-limit": "^4.10.2",
+    "ts-jest": "^26.5.4",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.2.4"
+  }
+}
